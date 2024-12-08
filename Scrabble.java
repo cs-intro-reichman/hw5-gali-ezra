@@ -48,10 +48,13 @@ public class Scrabble {
 
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
-		for (int i =0; i< DICTIONARY.length; i++) {
-			if (DICTIONARY[i].equals(word)) {
-				return true;
-			}
+		for (int i =0; i< NUM_OF_WORDS; i++) {
+			if ( DICTIONARY[i] != null) {
+
+				if (DICTIONARY[i].equals(word)) {
+					return true;
+				}
+			}	
 		}
 		return false;
 	}
@@ -113,7 +116,7 @@ public class Scrabble {
 			else if (isWordInDictionary(input) && MyString.subsetOf(input, hand)){
 				hand = MyString.remove(input, hand);
 				score += wordScore(input);
-				System.out.println(input +  "->" + "score: " +score);
+				System.out.println(input+ " earned "  + score + " points.  Score: " + score + " points");
 			}
 			
 		}
@@ -146,7 +149,7 @@ public class Scrabble {
 				break;
 			}
 			else {
-				System.out.println("invalid input");
+				System.out.println("Invalid word. Try again.");
 			}
 			
 		}
