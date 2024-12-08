@@ -95,13 +95,13 @@ public class MyString {
      * @return a randomly generated string, consisting of 'n' lowercase letters
      */
     public static String randomStringOfLetters(int n) {
-        String randonStr= "";
+        String randomStr= "";
         for (int i=0;i<n;i++) 
         {
             int randomChar = (int) ((Math.random() *(122-97+1) ) +97);
-            randonStr += (char)(randomChar);
+            randomStr += (char)(randomChar);
         }
-        return randonStr;
+        return randomStr;
     }
 
     /**
