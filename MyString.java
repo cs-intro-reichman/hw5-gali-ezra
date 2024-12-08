@@ -114,32 +114,32 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-       char [] arrStr1 = str1.toCharArray();
-       String newStr2= str2;
-       String remove="";
-
-       if (newStr2.length() == 0) {
-        return str1;
-    }
-    
-       for (int i=0;i< arrStr1.length;i++) {
-            if (newStr2.length() == 0) {
-                break;
-            }
-            int index = newStr2.indexOf(arrStr1[i]);
-            if (index != -1) {
-                arrStr1[i] = 0;
-                newStr2 = newStr2.substring(0, index) + newStr2.substring(index + 1);
-            }
-          
-       }
-       for (int i = 0; i<arrStr1.length;i++) {
-            if (arrStr1[i] !=0) {
-                remove += arrStr1[i];
-            }
-       }
-       return remove;
-    }
+        char [] arrStr1 = str1.toCharArray();
+        String newStr2= str2;
+        String remove="";
+ 
+        if (newStr2.length() == 0) {
+         return str1;
+     }
+     
+        for (int i=0;i< arrStr1.length;i++) {
+             if (newStr2.length() == 0) {
+                 break;
+             }
+             int index = newStr2.indexOf(arrStr1[i]);
+             if (index != -1) {
+                 arrStr1[i] = 0;
+                 newStr2 = newStr2.substring(0, index) + newStr2.substring(index + 1);
+             }
+           
+        }
+        for (int i = 0; i<arrStr1.length;i++) {
+             if (arrStr1[i] !=0) {
+                 remove += arrStr1[i];
+             }
+        }
+        return remove;
+     }
 
     /**
      * Returns a string consisting of the given string, with the given 
